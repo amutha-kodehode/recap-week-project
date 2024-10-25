@@ -112,7 +112,7 @@ const topSellers = [
 // First we beign with for loop to loop into the topSellers object.
 // We use  for of loop
 // Take the container from the html
-let mainContainer = document.querySelector("games-products");
+let mainContainer = document.querySelector(".games-products");
 console.log(mainContainer);
 for (let game of topSellers) {
   //Container to hold every single game information
@@ -131,5 +131,36 @@ for (let game of topSellers) {
   const titleValue = document.createElement("p");
   titleValue.textContent = game.title;
   textContainer.append(title, titleValue);
-  //
+  //creating developer
+  const developerContainer = document.createElement("div");
+  const developer = document.createElement("h3");
+  developer.textContent = "Developer:";
+  const developerValue = document.createElement("p");
+  developerValue.textContent = game.developer;
+  developerContainer.append(developer, developerValue);
+  //creating year
+  const yearContainer = document.createElement("div");
+  const year = document.createElement("h3");
+  year.textContent = "Release Year:";
+  const yearValue = document.createElement("p");
+  yearValue.textContent = game.releaseYear;
+  yearContainer.append(year, yearValue);
+  //creating categories
+  const categoriesContainer = document.createElement("div");
+  const categories = document.createElement("h3");
+  categories.textContent = "Categories:";
+  const categoriesValue = document.createElement("p");
+  categoriesValue.textContent = game.categories.toString();
+  categoriesContainer.append(categories, categoriesValue);
+
+  gameContainer.append(
+    gameImage,
+    textContainer,
+    developerContainer,
+    yearContainer,
+    categoriesContainer
+  );
+  mainContainer.append(gameContainer);
+
+  console.log(gameContainer);
 }
