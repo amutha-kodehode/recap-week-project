@@ -152,13 +152,31 @@ for (let game of topSellers) {
   const categoriesValue = document.createElement("p");
   categoriesValue.textContent = game.categories.toString();
   categoriesContainer.append(categories, categoriesValue);
+  // Descripiton
+  const descriptionContainer = document.createElement("div");
+  const description = document.createElement("h3");
+  description.textContent = "Description:";
+  const descriptionValue = document.createElement("p");
+  descriptionValue.textContent = game.categories.toString();
+  descriptionContainer.append(description, descriptionValue);
+  // Platforms
+  const platformContainer = document.createElement("h3");
+  const platform = document.createElement("h3");
+  platform.textcontent = "Platform:";
+  const platformValue = document.createElement("p");
+  platformValue.textcontent = game.platforms.toString();
+  platformContainer.append(platform, platformValue);
+  // Logo
+  // N/A
 
   gameContainer.append(
     gameImage,
     textContainer,
     developerContainer,
     yearContainer,
-    categoriesContainer
+    categoriesContainer,
+    descriptionContainer,
+    platformContainer
   );
   mainContainer.append(gameContainer);
 
