@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 body {
+  background-image: url("assets/simple5.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   font-size: 10px;
   padding: 50px;
   height: 100vh;
@@ -14,10 +19,16 @@ body {
 }
 
 .product {
+  background-color: violet;
+  margin-bottom: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 500px;
-  height: 300px;
+  max-height: 600px;
   border: 1px solid black;
+  padding: 10px;
 }
 .text-box {
   line-height: 1.4;
@@ -32,16 +43,20 @@ body {
   width: 70px;
   height: 70px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 540px) {
   body {
     .product {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
   }
 }
 
 .games-products {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
   font-family: "Kanit", sans-serif;
   font-weight: 300;
   font-style: normal;
