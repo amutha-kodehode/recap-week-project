@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+h1 {
+  color: white;
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
 body {
   background-image: url("assets/simple5.webp");
   background-position: center;
@@ -19,14 +25,15 @@ body {
 }
 
 .product {
-  background-color: violet;
+  margin-right: 20px;
+  background-color: rgb(88, 141, 184);
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 500px;
-  max-height: 600px;
+  height: 450px;
   border: 1px solid black;
   padding: 10px;
 }
@@ -40,16 +47,21 @@ body {
   display: flex;
 }
 .game-image {
+  margin: 10x;
   width: 70px;
   height: 70px;
 }
+.game-image:hover {
+  /* width: 50px; */
+  scale: 120%;
+}
+
 @media only screen and (max-width: 540px) {
-  body {
-    .product {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .games-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -58,7 +70,9 @@ body {
   flex-wrap: wrap;
   max-width: 1100px;
   font-family: "Kanit", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-size: 16px;
+  justify-content: center;
+  align-items: center;
 }
