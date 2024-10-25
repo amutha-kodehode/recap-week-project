@@ -157,7 +157,7 @@ for (let game of topSellers) {
   const description = document.createElement("h3");
   description.textContent = "Description:";
   const descriptionValue = document.createElement("p");
-  descriptionValue.textContent = game.categories.toString();
+  descriptionValue.textContent = game.description;
   descriptionContainer.append(description, descriptionValue);
   // Platforms
   const platformContainer = document.createElement("h3");
