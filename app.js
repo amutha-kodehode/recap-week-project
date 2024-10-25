@@ -109,3 +109,27 @@ const topSellers = [
     logo: "mario-kart-logo.jpg",
   },
 ];
+// First we beign with for loop to loop into the topSellers object.
+// We use  for of loop
+// Take the container from the html
+let mainContainer = document.querySelector("games-products");
+console.log(mainContainer);
+for (let game of topSellers) {
+  //Container to hold every single game information
+  const gameContainer = document.createElement("div");
+  gameContainer.classList.add(".product"); // adding css display flex
+
+  //creating image tag
+  const gameImage = document.createElement("img");
+  gameImage.src = `./logos/${game.logo}`;
+  gameImage.alt = `Logo of the game ${game.title}`;
+  gameImage.classList.add(".game-image");
+  //creating title
+  const textContainer = document.createElement("div");
+  const title = document.createElement("h3");
+  title.textContent = "Title: ";
+  const titleValue = document.createElement("p");
+  titleValue.textContent = game.title;
+  textContainer.append(title, titleValue);
+  //
+}
