@@ -117,20 +117,21 @@ console.log(mainContainer);
 for (let game of topSellers) {
   //Container to hold every single game information
   const gameContainer = document.createElement("div");
-  gameContainer.classList.add(".product"); // adding css display flex
-
+  gameContainer.classList.add("product"); // adding css display flex
+  const textContainer = document.createElement("div");
+  textContainer.classList.add("text-box");
   //creating image tag
   const gameImage = document.createElement("img");
   gameImage.src = `./logos/${game.logo}`;
   gameImage.alt = `Logo of the game ${game.title}`;
-  gameImage.classList.add(".game-image");
+  gameImage.classList.add("game-image");
   //creating title
-  const textContainer = document.createElement("div");
+  const titleContainer = document.createElement("div");
   const title = document.createElement("h3");
   title.textContent = "Title: ";
   const titleValue = document.createElement("p");
   titleValue.textContent = game.title;
-  textContainer.append(title, titleValue);
+  titleContainer.append(title, titleValue);
   //creating developer
   const developerContainer = document.createElement("div");
   const developer = document.createElement("h3");
@@ -169,15 +170,15 @@ for (let game of topSellers) {
   // Logo
   // N/A
 
-  gameContainer.append(
-    gameImage,
-    textContainer,
+  textContainer.append(
+    titleContainer,
     developerContainer,
     yearContainer,
     categoriesContainer,
     descriptionContainer,
     platformContainer
   );
+  gameContainer.append(gameImage, textContainer);
   mainContainer.append(gameContainer);
 
   console.log(gameContainer);
